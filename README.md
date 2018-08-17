@@ -1,4 +1,3 @@
-
 # Spreadshare Image Optimizer Service
 Its an image optimization microservice which works with other microservices by compressing and store images into S3 machine.
 
