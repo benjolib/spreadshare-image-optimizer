@@ -1,13 +1,8 @@
-# Serverless Boilerplate with Webpack and Babel
-The minimal serverless boilerplate with `webpack`, `babel`, `jest`, `flow` and `eslint`.
-This uses aws-lambda as the provider but can be easily configured to support others.
 
-## Run Locally
-Install dependencies: `npm install`
-Run first function locally `npm run invoke:local houses`
-Run second function locally `npm run invoke:local heir`
+# Spreadshare Image Optimizer Service
+Its an image optimization microservice which works with other microservices by compressing and store images into S3 machine.
 
-## Deploy
-`serverless deploy` or `yarn deploy`
+## Functions
 
-See other scripts in package.json for more options.
+- Optimize the image according to given dimensions and aspect ratio
+- Upload to Amazon S3 machine

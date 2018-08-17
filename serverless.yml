@@ -1,7 +1,7 @@
 frameworkVersion: '>=1.28.0'
 
 # NOTE: update this with your service name
-service: serverless-webpack-babel-boilerplate
+service: spreadshare-image-optimizer
 
 # Use the serverless-webpack plugin to transpile ES6
 plugins:
@@ -27,18 +27,16 @@ provider:
   environment: ${file(env.yml):${self:provider.stage}}
 
 functions:
-  houses:
-    handler: src/handlers/houses.handler
+  upload:
+    handler: src/handlers/upload.handler
     events:
       - http:
-          method: get
-          path: houses
-  heir:
-    handler: src/handlers/heir.handler
-    events:
-      - http:
-          method: get
-          path: heir
-
+          method: post
+          path: upload
+          # request: 
+          # parameters: 
+          #    paths: 
+          #      id: true
+ 
 package:
   individually: true
